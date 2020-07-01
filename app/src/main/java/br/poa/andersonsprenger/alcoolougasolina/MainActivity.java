@@ -17,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calcular(View view) {
-        TextInputEditText precoAlcool = findViewById(R.id.precoAlcool);
-        TextInputEditText precoGasolina = findViewById(R.id.precoGasolina);
-        TextView textoCalculo = findViewById(R.id.textoCalculo);
+        TextInputEditText precoAlcool       = findViewById(R.id.precoAlcool);
+        TextInputEditText precoGasolina     = findViewById(R.id.precoGasolina);
+        TextView textoCalculo               = findViewById(R.id.textoCalculo);
 
         try {
             if (
