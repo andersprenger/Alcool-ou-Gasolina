@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             }
         } catch (NumberFormatException | NullPointerException e) {
             textoCalculo.setText("=( Ops, algo não deu certo!");
-            Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG);
+            Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show();
         }
     }
 }
