@@ -1,6 +1,7 @@
 package br.poa.andersonsprenger.alcoolougasolina;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -15,22 +16,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void calcular(View view){
-        TextInputEditText precoAlcool       = findViewById(R.id.precoAlcool);
-        TextInputEditText precoGasolina     = findViewById(R.id.precoGasolina);
-        TextView textoCalculo               = findViewById(R.id.textoCalculo);
+    public void calcular(View view) {
+        TextInputEditText precoAlcool = findViewById(R.id.precoAlcool);
+        TextInputEditText precoGasolina = findViewById(R.id.precoGasolina);
+        TextView textoCalculo = findViewById(R.id.textoCalculo);
 
         try {
             if (
                     Double.parseDouble(precoAlcool.getText().toString())   /
                     Double.parseDouble(precoGasolina.getText().toString()) <
-            0.7d){
-                textoCalculo.setText("Melhor abastecer com alcool.");
+                    0.7d
+            ) {
+                textoCalculo.setText("Melhor abastecer com álcool.");
             } else {
                 textoCalculo.setText("Melhor abastecer com gasolina.");
             }
-        } catch (NumberFormatException e){
-            textoCalculo.setText("=( Ops, algo não deu certo! " + e.getMessage());
+        } catch (NumberFormatException | NullPointerException e) {
+            textoCalculo.setText("=( Ops, algo não deu certo!\n" + e.getMessage());
         }
     }
 }
