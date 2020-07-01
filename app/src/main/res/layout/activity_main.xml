@@ -46,7 +46,8 @@
                 android:id="@+id/precoAlcool"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Preço alcool ex 1.90" />
+                android:hint="Preço alcool ex 1.90"
+                android:inputType="number|numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -60,7 +61,8 @@
                 android:id="@+id/precoGasolina"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Preço gasolina ex 2.60" />
+                android:hint="Preço gasolina ex 2.60"
+                android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
