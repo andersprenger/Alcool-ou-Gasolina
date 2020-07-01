@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -32,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
                 textoCalculo.setText("Melhor abastecer com gasolina.");
             }
         } catch (NumberFormatException | NullPointerException e) {
-            textoCalculo.setText("=( Ops, algo não deu certo!\n" + e.getMessage());
+            textoCalculo.setText("=( Ops, algo não deu certo!");
+            Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG);
         }
     }
 }
